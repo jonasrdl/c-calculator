@@ -7,15 +7,15 @@ int main()
     char op, wd;
     do
     {
-        printf("First number?");
+        printf("First number?\n");
 
         scanf("%f", &num1);
 
-        printf("Second number?");
+        printf("Second number?\n");
 
         scanf("%f", &num2);
 
-        printf("Operator?");
+        printf("Operator?\n");
 
         scanf("\n%c", &op);
 
@@ -31,6 +31,13 @@ int main()
             result = num1 * num2;
             break;
         case '/':
+
+            if (num2 == 0)
+            {
+                printf("Cannot divide by zero\n");
+                return 0;
+            }
+
             result = num1 / num2;
             break;
         default:
@@ -41,7 +48,7 @@ int main()
 
         do
         {
-            printf("Wiederholen(J/N)");
+            printf("Wiederholen(J/N)\n");
             scanf("\n%c", &wd);
         } while ((wd != 'j') && (wd != 'J') && (wd != 'n') && (wd != 'N'));
     } while ((wd == 'j') || (wd == 'J'));
