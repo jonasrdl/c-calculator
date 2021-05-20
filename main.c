@@ -3,41 +3,41 @@
 
 int main()
 {
-    float erg, zahl1, zahl2;
+    float result, num1, num2;
     char op, wd;
     do
     {
-        printf("Bitte 1. Zahl:");
+        printf("First number?");
 
-        scanf("%f", &zahl1);
+        scanf("%f", &num1);
 
-        printf("Bitte 2. Zahl:");
+        printf("Second number?");
 
-        scanf("%f", &zahl2);
+        scanf("%f", &num2);
 
-        printf("Bitte Operator eingeben:");
+        printf("Operator?");
 
         scanf("\n%c", &op);
 
         switch (op)
         {
         case '+':
-            erg = zahl1 + zahl2;
+            result = num1 + num2;
             break;
         case '-':
-            erg = zahl1 - zahl2;
+            result = num1 - num2;
             break;
         case '*':
-            erg = zahl1 * zahl2;
+            result = num1 * num2;
             break;
         case '/':
-            erg = zahl1 / zahl2;
+            result = num1 / num2;
             break;
         default:
             printf("Fehler\n");
         }
 
-        printf("Erg=%8.3f\n", erg);
+        printf("Result=%8.3f\n", result);
 
         do
         {
