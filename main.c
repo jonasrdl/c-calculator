@@ -32,13 +32,14 @@ int main() {
 
             if (num2 == 0) {
                 printf("Cannot divide by zero\n");
-                return 0;
+                return -1;
             }
 
             result = num1 / num2;
             break;
         default:
             printf("Fehler\n");
+            return -1;
         }
 
         printf("Result=%8.3f\n", result);
