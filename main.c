@@ -1,12 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
-{
+int main() {
     float result, num1, num2;
     char op, wd;
-    do
-    {
+    
+    do {
         printf("First number?\n");
 
         scanf("%f", &num1);
@@ -19,8 +18,7 @@ int main()
 
         scanf("\n%c", &op);
 
-        switch (op)
-        {
+        switch (op) {
         case '+':
             result = num1 + num2;
             break;
@@ -32,8 +30,7 @@ int main()
             break;
         case '/':
 
-            if (num2 == 0)
-            {
+            if (num2 == 0) {
                 printf("Cannot divide by zero\n");
                 return 0;
             }
@@ -46,8 +43,7 @@ int main()
 
         printf("Result=%8.3f\n", result);
 
-        do
-        {
+        do {
             printf("Wiederholen(J/N)\n");
             scanf("\n%c", &wd);
         } while ((wd != 'j') && (wd != 'J') && (wd != 'n') && (wd != 'N'));
